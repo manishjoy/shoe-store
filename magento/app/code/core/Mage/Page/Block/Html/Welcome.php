@@ -52,9 +52,9 @@ class Mage_Page_Block_Html_Welcome extends Mage_Core_Block_Template
     {
         if (empty($this->_data['welcome'])) {
             if (Mage::isInstalled() && $this->_getSession()->isLoggedIn()) {
-                $this->_data['welcome'] = $this->__('Welcome, %s!', $this->escapeHtml($this->_getSession()->getCustomer()->getName()));
+                $this->_data['welcome'] = $this->__("Welcome!&nbsp;<img src='http://excellencetechnologies.co.in/manishjoy/html/web/images/lock.png' title='lock'>&nbsp;%s", $this->escapeHtml($this->_getSession()->getCustomer()->getName()));
             } else {
-                $this->_data['welcome'] = Mage::getStoreConfig('design/header/welcome');
+                $this->_data['welcome'] = $this->__("Welcome!&nbsp;<img src='http://excellencetechnologies.co.in/manishjoy/html/web/images/lock.png' title='lock'>&nbsp;Login");
             }
         }
 
