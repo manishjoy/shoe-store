@@ -28,16 +28,37 @@
 $catalogSearchHelper =  $this->helper('catalogsearch');
 ?>
 <form id="search_mini_form" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get">
-    <div class="form-search">
-        <label for="search"><?php echo $this->__('Search:') ?></label>
-        <input id="search" type="text" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" class="input-text" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" />
-        <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Search')) ?>" class="button"><span><span><?php echo $this->__('Search') ?></span></span></button>
-        <div id="search_autocomplete" class="search-autocomplete"></div>
-        <script type="text/javascript">
-        //<![CDATA[
-            var searchForm = new Varien.searchForm('search_mini_form', 'search', '<?php echo Mage::helper('core')->jsQuoteEscape($this->__('Search entire store here...')) ?>');
-            searchForm.initAutocomplete('<?php echo $catalogSearchHelper->getSuggestUrl() ?>', 'search_autocomplete');
-        //]]>
-        </script>
+    <div class="form-search-container">
+        <div class="form-search">
+            <div class="left-menu1">
+                <div class="bar">|</div>
+                <a href="<?php echo $this->getUrl('') ?>">HOME</a>
+                <div class="bar">|</div>
+                <a href="<?php echo $this->getUrl('about-magento-demo-store') ?>">ABOUT US</a>
+                <div class="bar">|</div>
+                <a href="<?php echo $this->getUrl('contacts') ?>">CONTACT US  </a>
+                <div class="bar">|</div>
+            </div>
+            <div id="flag"></div>
+            <input id="search" type="text" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" class="input-text" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" />
+            <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Search')) ?>" class="button"><span><span><?php echo $this->__('Search') ?></span></span></button>
+            <div id="search_autocomplete" class="search-autocomplete"></div>
+            <script type="text/javascript">
+            //<![CDATA[
+                var searchForm = new Varien.searchForm('search_mini_form', 'search', '<?php echo Mage::helper('core')->jsQuoteEscape($this->__('Search')) ?>');
+                searchForm.initAutocomplete('<?php echo $catalogSearchHelper->getSuggestUrl() ?>', 'search_autocomplete');
+            //]]>
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+            <script type="text/javascript">
+            $(document).ready(function(){
+                $(".form-search-container").css("width",$(window).width());
+                $margin = ($(window).width()-942)/2;
+                $(".form-search-container").css("margin-left",-$margin);
+                $(".form-search").css("margin-left",$margin);
+                console.log($(window).width());
+            });
+            </script>
+        </div>
     </div>
 </form>
