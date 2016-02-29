@@ -48,6 +48,8 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>varien/menu.js</script></action>
                 <action method="addJs"><script>mage/translate.js</script></action>
                 <action method="addJs"><script>mage/cookies.js</script></action>
+                <action method="addJs"><script>footer_js/jquery.min.js</script></action>
+                <action method="addJs"><script>footer_js/footer.js</script></action>
 
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
 
@@ -88,8 +90,8 @@ Default layout, loads most of the pages
 
             <block type="core/messages" name="global_messages" as="global_messages"/>
             <block type="core/messages" name="messages" as="messages"/>
-
             <block type="core/text_list" name="content" as="content" translate="label">
+
                 <label>Main Content Area</label>
             </block>
 

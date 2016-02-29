@@ -35,22 +35,22 @@
 	            Please enter your valid email.we wont spam
 	            </p>
 	        </div>
-	        <div class="footer-gap"><img src="http://excellencetechnologies.co.in/manishjoy/html/web/images/footerdevoder.png" height="100px"></div>
+	        <div class="footer-gap"><img src="<?php echo $this->getSkinUrl('images/footerdevoder.png'); ?>" height="100px"></div>
 	        <div class="part-2">
-	        	<div class="cart"><img src="http://excellencetechnologies.co.in/manishjoy/html/web/images/cart12.png" height="100%"></div>
+	        	<div class="cart"><img src="<?php echo $this->getSkinUrl('images/cart12.png'); ?>" height="100%"></div>
 	        	<div class="yellow">
 	        		<p id="x">Free Shipping</p>
 	        		<p id="y">on orders over $250</p>
 	        	</div>
 	        </div>
-	        <div class="footer-gap"><img src="http://excellencetechnologies.co.in/manishjoy/html/web/images/footerdevoder.png" height="100px"></div>
+	        <div class="footer-gap"><img src="<?php echo $this->getSkinUrl('images/footerdevoder.png'); ?>" height="100px"></div>
 	        <div class="part-3">
 	        	<p id="follow-text">Follow Us</p>
 	        	<div class="social">
-	        		<a href="#"><img src="http://excellencetechnologies.co.in/manishjoy/html/web/images/iconfacebook.png"></a>
-	        		<a href="#"><img src="http://excellencetechnologies.co.in/manishjoy/html/web/images/twitter.png"></a>
-	        		<a href="#"><img src="http://excellencetechnologies.co.in/manishjoy/html/web/images/linkdin.png"></a>
-	        		<a href="#"><img src="http://excellencetechnologies.co.in/manishjoy/html/web/images/rss.png"></a>
+	        		<a href="#"><img src="<?php echo $this->getSkinUrl('images/iconfacebook.png'); ?>"></a>
+	        		<a href="#"><img src="<?php echo $this->getSkinUrl('images/twitter.png'); ?>"></a>
+	        		<a href="#"><img src="<?php echo $this->getSkinUrl('images/linkdin.png'); ?>"></a>
+	        		<a href="#"><img src="<?php echo $this->getSkinUrl('images/rss.png'); ?>"></a>
 	        	</div>
 	        </div>
 		</div>
@@ -70,11 +70,3 @@
 	</div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-	    $margin = ($(window).width()-$(".main").width())/2-10;
-	    $(".before-footer").css("margin-left",$margin);
-	    console.log($(window).width());
-	});
-</script>
