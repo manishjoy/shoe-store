@@ -635,9 +635,10 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Sidebar =============================================================================== */
 .block { border:1px solid #c4c1bc; margin:0 0 15px; }
-.block .block-title { background:url(../images/bkg_block-title.gif) 0 0 repeat-x; border-bottom:1px solid #ddd; padding:2px 9px; }
+.block .block-title { border-bottom:1px solid #ddd; padding:2px 9px; }
 .block .block-title strong { display:block; font:bold 12px/16px Arial, Helvetica, sans-serif; min-height:16px; padding:1px 0 1px; text-transform:uppercase; color:#e26703; }
 .block .block-title strong span {}
+.block-cart .block-title strong span{ color: #FFFFFF;}
 .block .block-title a { text-decoration:none !important; }
 .block .block-subtitle { margin:0; padding:5px 9px; font-size:1em; font-weight:bold; color:#0a263c; }
 .block .block-content { background:#f8f7f5; }
@@ -645,7 +646,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block .block-content .product-name { color:#1e7ec8; }
 .block .btn-remove,
 .block .btn-edit { float:right; margin:1px 0 2px 5px; }
-.block .actions { background:#dee5e8 url(../images/bkg_block-actions.gif) 0 0 repeat-x; padding:6px 9px; text-align:right; }
+.block .actions { padding:6px 9px; text-align:right; }
 .block .actions a { float:left; }
 .block .actions button.button { float:right; }
 .block .empty { margin:0; padding:5px 9px; }
@@ -721,16 +722,19 @@ tr.summary-details-excluded { font-style:italic; }
 .block-layered-nav .actions a { float:none; }
 
 /* Block: Cart */
-.block-cart .block-title { /*border-bottom:0;*/ }
-.block-cart .block-title strong { background-image:url(../images/i_block-cart.gif); }
-.block-cart .summary { background:#fff; padding:2px 8px 8px; margin:-1px 0 0; position:relative; z-index:1; }
-.block-cart .amount { margin:0; }
-.block-cart .amount a { font-weight:bold; }
-.block-cart .subtotal { margin:5px 0 0; padding:2px 0; background:#fbebd9; text-align:center; }
+.block-cart .block-title { background-color: #FF1929; /*border-bottom:0;*/ }
+.block-cart .block-title strong { font-size: 1.3em; padding: 5px 0px; }
+.block-cart .summary { background:#FF1929; padding:2px 8px 8px; margin:-1px 0 0; position:relative; z-index:1; }
+.block-cart .amount { margin:0; font-size: 1em; color: #FFFFFF;}
+.block-cart .amount a { font-weight:bold; color: #FFFFFF; }
+.block-cart .subtotal { margin:5px 0 0; padding:2px 0; background:#FFFFFF; text-align:center; color: #000000;}
 .block-cart .subtotal .price { font-weight:bold; }
-.block-cart .actions { border-bottom:1px solid #c2c2c2; }
+.block-cart .actions { background-color: #FF1929;}
 .block-cart .actions .paypal-logo { float:left; width:100%; margin:3px 0 0; text-align:right; }
 .block-cart .actions .paypal-logo .paypal-or { clear:both; display:block; padding:0 55px 8px 0; }
+.block-cart .block-subtitle { background-color: #FF1929; color: #FFFFFF;}
+.block-cart .block-content{ background-color: #FF1929; color: #FFFFFF; font-size: 1em;}
+.block-cart .block-content a{ color: #FFFFFF;}
 
 /* Block: Wishlist */
 .block-wishlist .block-title strong { background-image:url(../images/i_block-wishlist.gif); }
@@ -765,10 +769,15 @@ tr.summary-details-excluded { font-style:italic; }
 .compare-table tr.add-to-row td p { margin:0; }
 
 /* Block: Recently Viewed */
-.block-viewed .block-title strong { background-image:url(../images/i_block-viewed.gif); }
-
+.block-viewed {background-color: #000000;}
+.block-viewed .block-title {border-bottom: 1px solid #000000;}
+.block-viewed .block-title strong { color: #FFFFFF; font-size: 1.3em; padding: 5px 0px; }
+.block-viewed .block-content { background-color: #000000; padding: 7px 5px; font-size: 1em;}
+.block-viewed .block-content a{ color: #FFFFFF;}
 /* Block: Recently Compared */
-.block-compared .block-title strong { background-image:url(../images/i_block-list.gif); background-position:0 1px; }
+.block-compared .block-title strong { background-position:0 1px; color: #000000; font-size: 1.3em; padding: 5px 0px;}
+.block-compared .block-content {background-color: #FFFFFF;}
+.block-compared .block-content a {color: #000000;}
 
 /* Block: Poll */
 .block-poll .block-title strong { background-image:url(../images/i_block-poll.gif); }
