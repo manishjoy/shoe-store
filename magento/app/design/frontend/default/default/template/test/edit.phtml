@@ -1,0 +1,28 @@
+<?php
+$status = Mage:: registry('status');
+if($status == 1)
+{
+    $op1_select="selected";
+    $op1_select="";
+}
+else{
+    $op1_select="";
+    $op2_select="selected";
+}
+?>    
+  
+
+<div>
+    <h4><?php echo $this->__('Edit Row'); ?></h4>
+    <label>Id:</label><?php echo " ".Mage:: registry('id'); ?><br>
+    <form id="myform" action="" method="POST" class="scaffold-form">
+        <label>Title:</label><br><input type="text" name="row[title]" id= "title" placeholder="Title" value=<?php echo Mage:: registry('title'); ?> /><br/>
+        <label>Content:</label><br><textarea type="text" name="row[content]" id= "content" placeholder="Content" ><?php echo Mage:: registry('content'); ?></textarea><br/>
+        <label>Status:</label><br>
+        <select name="row[status]" id= "status">
+            <option value="1" <?php echo $op1_select; ?> >Enabled</option>
+            <option value="2" <?php echo $op2_select; ?> >Disabled</option>
+        </select><br/><br>
+        <input type="submit" name="row[sub]" id="sub" value="Submit" class="btn" />
+    </form>
+</div>
