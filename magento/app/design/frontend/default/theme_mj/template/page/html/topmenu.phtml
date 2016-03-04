@@ -37,11 +37,11 @@
     <ul id="nav">
         <?php echo $_menu ?>
         <li id="right">
-        	<img src="http://excellencetechnologies.co.in/manishjoy/html/web/images/tag.png">
+        	<img src="<?php echo $this->getSkinUrl('images/tag.png');?>">
         	<a class="level-top" href="<?php echo $this->getUrl('checkout/onepage/') ?>">Checkout</a>
         </li>
         <li id="right">
-        	<img src="http://excellencetechnologies.co.in/manishjoy/html/web/images/cart.png">
+        	<img src="<?php echo $this->getSkinUrl('images/cart.png');?>">
         	<a class="level-top" href="<?php echo $this->getUrl('checkout/cart') ?>">My Cart</a>
         </li>
     </ul>

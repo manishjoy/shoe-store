@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <test_index_index>
+        <reference name="content">
+            <block type="test/test" name="test" template="test/test.phtml" />
+        </reference>
+    </test_index_index>
+    <test_user_view_history>
+        <reference name="content">
+            <block type="test/test" name="test" template="test/history.phtml" />
+        </reference>
+    </test_user_view_history>
+    <test_edit_edit>
+        <reference name="content">
+            <block type="test/test" name="test" template="test/edit.phtml" />
+        </reference>
+    </test_edit_edit>
+    <test_index_add>
+        <reference name="content">
+            <block type="test/test" name="test" template="test/add.phtml" />
+        </reference>
+    </test_index_add>
+    <test_index_edit>
+        <reference name="content">
+            <block type="test/test" name="test" template="test/edit2.phtml" />
+        </reference>
+    </test_index_edit>
+    <test_index_add2>
+        <reference name="content">
+            <block type="test/test" name="test" template="test/add2.phtml" />
+        </reference>
+    </test_index_add2>
+</layout> 

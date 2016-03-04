@@ -25,9 +25,48 @@
  */
 ?>
 <div class="footer-container">
-    <div class="footer">
-        <?php echo $this->getChildHtml() ?>
-        <p class="bugs"><?php echo $this->__('Help Us to Keep Magento Healthy') ?> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target='_blank'"><strong><?php echo $this->__('Report All Bugs') ?></strong></a> <?php echo $this->__('(ver. %s)', Mage::getVersion()) ?></p>
-        <address><?php echo $this->getCopyright() ?></address>
-    </div>
+	<div class="before-footer-container">
+		<div class="before-footer">
+			<div class="part-1">
+	            <p id="p">Newsletter</p>
+	            <input type="text" id="text2">
+	            <a href="#"><button type="button" id="bt2">GO</button></a>
+	            <p id="q">
+	            Please enter your valid email.we wont spam
+	            </p>
+	        </div>
+	        <div class="footer-gap"><img src="<?php echo $this->getSkinUrl('images/footerdevoder.png'); ?>" height="100px"></div>
+	        <div class="part-2">
+	        	<div class="cart"><img src="<?php echo $this->getSkinUrl('images/cart12.png'); ?>" height="100%"></div>
+	        	<div class="yellow">
+	        		<p id="x">Free Shipping</p>
+	        		<p id="y">on orders over $250</p>
+	        	</div>
+	        </div>
+	        <div class="footer-gap"><img src="<?php echo $this->getSkinUrl('images/footerdevoder.png'); ?>" height="100px"></div>
+	        <div class="part-3">
+	        	<p id="follow-text">Follow Us</p>
+	        	<div class="social">
+	        		<a href="#"><img src="<?php echo $this->getSkinUrl('images/iconfacebook.png'); ?>"></a>
+	        		<a href="#"><img src="<?php echo $this->getSkinUrl('images/twitter.png'); ?>"></a>
+	        		<a href="#"><img src="<?php echo $this->getSkinUrl('images/linkdin.png'); ?>"></a>
+	        		<a href="#"><img src="<?php echo $this->getSkinUrl('images/rss.png'); ?>"></a>
+	        	</div>
+	        </div>
+		</div>
+	</div>
+	<div class="after-footer">
+		<p>
+			<a href="<?php echo $this->getUrl('about-magento-demo-store')?>">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="<?php echo $this->getUrl('customer-service')?>">Customer Service</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="<?php echo $this->getUrl('catalog/seo_sitemap/category')?>">Site Map</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="<?php echo $this->getUrl('catalogsearch/term/popular')?>">Search Terms</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="<?php echo $this->getUrl('catalogsearch/advanced')?>">Advanced Searchs</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="<?php echo $this->getUrl('sales/order/history')?>">Orders & Returns</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="<?php echo $this->getUrl('contacts')?>">Contact Us</a>
+		</p>
+		<div style="clear:both;"></div>
+		<p><?php echo $this->getCopyright() ?></p>
+	</div>
 </div>
+

@@ -51,10 +51,11 @@ class Mage_Page_Block_Html_Welcome extends Mage_Core_Block_Template
     protected function _toHtml()
     {
         if (empty($this->_data['welcome'])) {
+            $lock = $this->getSkinUrl('images/lock.png');
             if (Mage::isInstalled() && $this->_getSession()->isLoggedIn()) {
-                $this->_data['welcome'] = $this->__("Welcome!&nbsp;<img src='http://excellencetechnologies.co.in/manishjoy/html/web/images/lock.png' title='lock'>&nbsp;%s", $this->escapeHtml($this->_getSession()->getCustomer()->getName()));
+                $this->_data['welcome'] = $this->__("Welcome!&nbsp;<img src='$lock'>&nbsp;%s", $this->escapeHtml($this->_getSession()->getCustomer()->getName()));
             } else {
-                $this->_data['welcome'] = $this->__("Welcome!&nbsp;<img src='http://excellencetechnologies.co.in/manishjoy/html/web/images/lock.png' title='lock'>&nbsp;Login");
+                $this->_data['welcome'] = $this->__("Welcome!&nbsp;<img src='$lock'>&nbsp;Login");
             }
         }
 

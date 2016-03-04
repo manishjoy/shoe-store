@@ -1,0 +1,14 @@
+<div>
+    <h4><?php echo $this->__('Add Row'); ?></h4>
+    <form id="myform" action="" method="POST">
+        <label>Title:</label><br><input type="text" name="row[title]" id= "title" placeholder="Title" /><br/>
+        <label>Content:</label><br><textarea type="text" name="row[content]" id= "content" placeholder="Content" ></textarea><br/>
+        <label>Status:</label><br>
+        <select name="row[status]" id= "status">
+            <option value="1" >Enabled</option>
+            <option value="2" >Disabled</option>
+        </select><br/><br>
+        <input type="submit" name="row[sub]" id="sub" value="Submit" class="btn" />
+    </form>
+</div>
+

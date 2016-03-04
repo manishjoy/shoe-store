@@ -1,0 +1,38 @@
+<br><h4><?php echo $this->__('Table 1'); ?></h4> 
+<?php $model = $this->showTable('test'); ?>
+
+<?php echo $this->getPagerHtml(); ?>
+<br>
+<?php if($model->getSize()): ?>
+<table border='3' class="data-table" id="test-table">
+  <thead>
+   <tr>
+       <th>Id</th>
+       <th>Title</th>
+       <th>Content</th>
+       <th>Status</th>
+       <th>Edit</th>
+       <th>Delete</th>
+   </tr>
+  </thead>
+<?php foreach ($model as $item) : ?>
+    <tr>
+        <td> <?php echo $item->getData('test_id'); ?></td>
+        <td> <?php echo $item->getData('title'); ?></td>
+        <td> <?php echo $item->getData('content'); ?></td>
+        <td><?php if($item->getData('status')==1){ echo $this->__('Enabled');} else { echo $this->__('Disabled');} ?></td>
+        <td><a href="<?php echo $this->getEditUrl('test',$item->getData('test_id')) ?>" class="f-left"><?php echo $this->__('Edit') ?></a></td>
+        <td><a href="<?php echo $this->getDeleteUrl('test',$item->getData('test_id')) ?>" class="f-left"><?php echo $this->__('Delete') ?></a></td>
+    </tr>
+
+<?php endforeach; ?>
+</table>
+<script type="text/javascript">decorateTable('test-table')</script>
+
+<?php else: ?>
+    <p><?php echo $this->__('No Row to show...'); ?></p>
+<?php endif ?>
+
+
+<br>
+<button type="button" class="button" onclick="setLocation('<?php echo Mage::helper('test')->quoteEscape($this->getAddUrl('test')) ?>')"><span><span><?php echo $this->__('Add Row') ?></span></span></button>
