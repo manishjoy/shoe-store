@@ -52,4 +52,14 @@ class Excellence_Test_Block_Test extends Mage_Core_Block_Template
     public function getAddUrl($module_name){
         return Mage::getUrl('test/index/add', array('module_name' => $module_name));
     }
+    public function getAdminData()
+    {
+        $data = array(Mage::getStoreConfig('testsection/test/name', Mage::app()->getStore()), 
+                    Mage::getStoreConfig('testsection/test/patient', Mage::app()->getStore()),
+                    Mage::getStoreConfig('testsection/test/slider', Mage::app()->getStore()));
+        // $data[0] = Mage::getStoreConfig('testsection/test/name', Mage::app()->getStore());
+        // $data[1] = Mage::getStoreConfig('testsection/test/patient', Mage::app()->getStore());
+        // $data = Mage::getStoreConfig('testsection/test/patient', Mage::app()->getStore());
+        return $data;
+    }
 }

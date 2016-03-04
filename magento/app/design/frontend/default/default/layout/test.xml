@@ -3,9 +3,6 @@
     <default>
     </default>
     <test_index_index>
-        <reference name="head">
-            <action method="addCss"><stylesheet>css/test.css</stylesheet></action>
-        </reference>
         <reference name="content">
             <block type="test/test" name="test" template="test/test.phtml" />
         </reference>
@@ -16,19 +13,18 @@
         </reference>
     </test_user_view_history>
     <test_index_add>
-        <reference name="head">
-            <action method="addCss"><stylesheet>css/test.css</stylesheet></action>
-        </reference>
         <reference name="content">
             <block type="test/test" name="test" template="test/add.phtml" />
         </reference>
     </test_index_add>
     <test_index_edit>
-        <reference name="head">
-            <action method="addCss"><stylesheet>css/test.css</stylesheet></action>
-        </reference>
         <reference name="content">
             <block type="test/test" name="test" template="test/edit.phtml" />
         </reference>
     </test_index_edit>
+    <test_index_admin>
+        <reference name="content">
+            <block type="test/test" name="test" template="test/admin.phtml" />
+        </reference>
+    </test_index_admin>
 </layout> 
