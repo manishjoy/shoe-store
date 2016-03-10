@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   Excellence
+ * @package    Excellence_Test
+ * @author     ModuleCreator
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <Excellence_Test>
+            <version>0.1.0</version>
+        </Excellence_Test>
+    </modules>
+    <frontend>
+        <routers>
+            <test>
+                <use>standard</use>
+                <args>
+                    <module>Excellence_Test</module>
+                    <frontName>test</frontName>
+                </args>
+            </test>
+        </routers>
+        <layout>
+            <updates>
+                <test>
+                    <file>test.xml</file>
+                </test>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+			<test>
+				<use>admin</use>
+				<args>
+					<module>Excellence_Test</module>
+					<frontName>test</frontName>
+				</args>
+			</test>
+        </routers>
+    </admin>
+    <adminhtml>
+		<menu>
+			<test module="test">
+				<title>Test</title>
+				<sort_order>71</sort_order>               
+				<children>
+					<items module="test">
+						<title>Manage Items</title>
+						<sort_order>0</sort_order>
+						<action>test/adminhtml_test</action>
+					</items>
+				</children>
+			</test>
+		</menu>
+		<layout>
+			<updates>
+				<test>
+					<file>test.xml</file>
+				</test>
+			</updates>
+		</layout>
+        <acl>
+            <resources>
+                <admin>  <!--This is acl based on URL. If you see URL it would be /admin/system_config/ -->
+                    <children>
+                        <system>
+                            <children>
+                                         <config>
+                                                  <children>
+                                            <testsection translate="title" module="fav">  <!-- This is name of the section created by us -->
+                                                <title>Test Section ACL</title>  <!-- Title as shown in User->Roles->Permissions Window -->
+                                                <sort_order>99</sort_order>
+                                            </testsection>
+                                        </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>   
+    <global>
+        <models>
+            <test>
+                <class>Excellence_Test_Model</class> <!-- Location of all model class files -->
+                <resourceModel>test_mysql4</resourceModel> <!-- Location of resource model -->
+            </test>
+            <test_mysql4>
+                <class>Excellence_Test_Model_Mysql4</class>
+                <entities>
+                    <test>
+                        <table>test</table> <!-- Actual table name in sql  -->
+                    </test>
+                    <test2>
+                        <table>test2</table> <!-- second table name in sql  -->
+                    </test2>
+                </entities>
+            </test_mysql4>
+        </models>
+        <resources> <!-- These are resource setting giving access to module, read/write permission on database -->
+            <test_setup>
+                <setup>
+                    <module>Excellence_Test</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </test_setup>
+            <test_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </test_write>
+            <test_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </test_read>
+        </resources>
+        <blocks>
+            <test>
+                <class>Excellence_Test_Block</class>
+            </test>
+        </blocks>
+        <helpers>
+            <test>
+                <class>Excellence_Test_Helper</class>
+            </test>
+        </helpers>
+    </global>
+    <default>  <!-- This needs to be placed direct inside <config> tag -->
+        <testsection>  <!-- Name of section -->
+            <test> <!-- Name of group -->
+                <patient>1</patient> <!-- Name of field -->
+                <slider>1</slider>
+            </test>
+        </testsection>
+    </default>
+</config>
