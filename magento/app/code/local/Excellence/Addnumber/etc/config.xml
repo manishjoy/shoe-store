@@ -93,6 +93,16 @@
                     </addnumber>
                 </entities>
             </addnumber_mysql4>
+            <customer_resource>
+                <rewrite>
+                    <customer>Excellence_Addnumber_Model_Customer_Resource_Customer</customer>
+                </rewrite>
+            </customer_resource>
+            <customer>
+               <rewrite>
+                   <customer>Excellence_Addnumber_Model_Customer_Customer</customer>
+               </rewrite>
+           </customer>
         </models>
         <resources>
             <addnumber_setup>
